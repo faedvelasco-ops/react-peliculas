@@ -1,9 +1,48 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100svh;
+}
+
 header {
-  text-align: center;
-  padding: 1.5rem 0 0.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  padding: 1rem 2.5rem;
+  background: rgba(11, 11, 15, 0.75);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
 }
 
 .title {
   margin: 0;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.title::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 0.6rem;
+  border-radius: 2px;
+  background: var(--accent);
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 0.85rem 1.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+}
+
+main {
+  flex: 1;
 }

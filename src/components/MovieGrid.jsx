@@ -1,17 +1,7 @@
-import { useEffect, useState } from "react";
-import { get } from "../services/httpClient";
 import MovieCard from "./MovieCard";
 import "./MovieGrid.css";
 
-function MovieGrid() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    get("/discover/movie")
-      .then((data) => setMovies(data.results))
-      .catch((error) => console.error(error));
-  }, []);
-
+function MovieGrid({ movies }) {
   return (
     <ul className="container">
       {movies.map((movie) => (

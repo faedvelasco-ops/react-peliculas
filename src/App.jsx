@@ -1,14 +1,19 @@
 import "./App.css";
 import AppRouter from "./routers/AppRouter";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div>
+    <div className="app-shell">
       <header>
-        <h1 className="title">🎬 Películas</h1>
+        <h1 className="title">Películas</h1>
       </header>
 
-      <AppRouter />
+      <main>
+        <AppRouter />
+      </main>
+
+      <Footer />
     </div>
   );
 }
