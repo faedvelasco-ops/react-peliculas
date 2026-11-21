@@ -1,0 +1,30 @@
+.detailsContainer {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.movieImage {
+  width: 300px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.movieDetails h2 {
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .detailsContainer {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .movieImage {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
